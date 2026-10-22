@@ -51,7 +51,7 @@ export async function seedDatabase() {
       name: "Renewable Energy & Storage",
       slug: "renewable-energy",
       description: "Industrial solar inverters, lithium battery banks, grid equipment, and smart meters",
-      imageUrl: "https://images.unsplash.com/photo-1509391365360-2e959784a276?w=800&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
     },
     {
       name: "Packaging & Logistics Supplies",
@@ -354,7 +354,8 @@ export async function seedDatabase() {
         "Enclosure Rating": "NEMA 4X / IP66",
       },
       images: [
-        "https://images.unsplash.com/photo-1509391365360-2e959784a276?w=800&q=80",
+        "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
+        "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&q=80",
       ],
       priceTiers: [
         { minQuantity: 2, maxQuantity: 4, unitPrice: 5800.0 },

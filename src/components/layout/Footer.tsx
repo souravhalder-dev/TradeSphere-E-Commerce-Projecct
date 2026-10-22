@@ -110,8 +110,20 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-slate-900 py-6 text-center text-xs text-slate-500">
+      <div className="border-t border-slate-900 py-6 px-4 sm:px-8 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
         <p>© 2026 TradeSphere Inc. All rights reserved. Enterprise B2B & B2C Global Trading Infrastructure.</p>
+        <p className="flex items-center gap-1.5">
+          <span>Developed by</span>
+          <a
+            href="https://github.com/souravhalder-dev"
+            target="_blank"
+            rel="noreferrer"
+            className="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center gap-1 transition"
+          >
+            <span>Sourav Halder</span>
+            <span className="text-[10px] bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded border border-slate-700">GitHub</span>
+          </a>
+        </p>
       </div>
     </footer>
   );

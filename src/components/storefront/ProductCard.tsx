@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import Image from "next/image";
+import { useState } from "react";
 import { ShieldCheck, Star, Clock, Factory } from "lucide-react";
 import { MockProduct } from "@/lib/data/mock-data";
 import { formatCurrency } from "@/lib/utils";
@@ -34,6 +36,10 @@ export function ProductCard({ product }: ProductCardProps) {
           <img
             src={primaryImage}
             alt={product.name}
+            onError={(e) => {
+              (e.target as HTMLImageElement).src =
+                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80";
+            }}
             className="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300"
           />
 

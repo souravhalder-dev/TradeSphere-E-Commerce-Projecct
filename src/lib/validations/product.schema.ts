@@ -16,8 +16,8 @@ export const variantSchema = z.object({
 
 export const productCreateSchema = z.object({
   name: z.string().min(3, "Product name must be at least 3 characters"),
-  categoryId: z.string().uuid("Invalid category ID"),
-  brandId: z.string().uuid().optional().nullable(),
+  categoryId: z.string().min(1, "Category ID is required"),
+  brandId: z.string().optional().nullable(),
   description: z.string().min(20, "Description must be at least 20 characters"),
   basePrice: z.number().positive("Base price must be positive"),
   moq: z.number().int().min(1, "Minimum Order Quantity must be at least 1").default(1),

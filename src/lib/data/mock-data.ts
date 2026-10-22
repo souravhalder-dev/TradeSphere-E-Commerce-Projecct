@@ -200,7 +200,7 @@ export const INITIAL_CATEGORIES: MockCategory[] = [
     name: "Renewable Energy & Storage",
     slug: "renewable-energy",
     description: "Commercial solar inverters, lithium energy storage, smart microgrid units, and PV panels",
-    imageUrl: "https://images.unsplash.com/photo-1509391365360-2e959784a276?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
     productCount: 840,
   },
   {
@@ -418,7 +418,8 @@ export const INITIAL_PRODUCTS: MockProduct[] = [
       "Enclosure": "NEMA 4X / IP66",
     },
     images: [
-      "https://images.unsplash.com/photo-1509391365360-2e959784a276?w=800&q=80",
+      "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
+      "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&q=80",
     ],
     priceTiers: [
       { id: "tier-inv-1", productId: "prod-solar-inv", minQuantity: 2, maxQuantity: 4, unitPrice: 5800.0 },

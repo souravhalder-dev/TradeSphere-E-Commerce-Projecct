@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const rfqCreateSchema = z.object({
   title: z.string().min(5, "RFQ title must be at least 5 characters"),
-  categoryId: z.string().uuid("Please select a valid category"),
+  categoryId: z.string().min(1, "Please select a valid category"),
   quantity: z.number().int().min(1, "Quantity must be at least 1"),
   targetPrice: z.number().positive("Target price must be positive").optional().nullable(),
   destinationCountry: z.string().min(2, "Destination country is required"),
@@ -11,7 +11,7 @@ export const rfqCreateSchema = z.object({
 });
 
 export const quotationSubmitSchema = z.object({
-  rfqId: z.string().uuid(),
+  rfqId: z.string().min(1, "RFQ ID is required"),
   unitPrice: z.number().positive("Unit price must be positive"),
   minQuantity: z.number().int().min(1).default(1),
   leadTimeDays: z.number().int().min(1).default(7),
@@ -20,8 +20,8 @@ export const quotationSubmitSchema = z.object({
 });
 
 export const negotiationMessageSchema = z.object({
-  rfqId: z.string().uuid().optional(),
-  quotationId: z.string().uuid().optional(),
+  rfqId: z.string().min(1).optional(),
+  quotationId: z.string().min(1).optional(),
   message: z.string().min(1, "Message cannot be empty"),
   proposedPrice: z.number().positive().optional().nullable(),
   proposedQuantity: z.number().int().positive().optional().nullable(),

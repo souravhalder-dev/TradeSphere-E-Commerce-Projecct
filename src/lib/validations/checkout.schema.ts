@@ -13,8 +13,8 @@ export const addressSchema = z.object({
 });
 
 export const checkoutItemSchema = z.object({
-  productId: z.string().uuid(),
-  variantId: z.string().uuid().optional().nullable(),
+  productId: z.string().min(1, "Product ID is required"),
+  variantId: z.string().optional().nullable(),
   quantity: z.number().int().min(1),
 });
 
